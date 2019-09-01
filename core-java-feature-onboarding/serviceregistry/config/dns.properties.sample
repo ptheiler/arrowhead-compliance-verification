@@ -1,0 +1,21 @@
+# leave TSIG fields empty if not used
+# and it is currently not used in our public test beds
+# e.g. tsig_name=key.arrowhead.tmit.bme.hu
+# e.g. tsig_key=RM/jKKEPYB83peT0DQnYGg==
+# e.g. tsig_algorithm=hmac-md5
+
+tsig_name=
+tsig_key=
+tsig_algorithm=
+
+dns_address=152.66.246.237
+dns_port=53
+
+# setting dnssd.domain property for dnssdjava
+dns_domain=arrowhead.tmit.bme.hu
+
+# the registrator domain has to be an absolute one with '.' at the end!
+dns_registrator_domain=srv.arrowhead.tmit.bme.hu.
+
+# dnssd.hostname property for dnssdjava
+dns_host=localhost

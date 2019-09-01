@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>ComplianceChecker.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+ComplianceChecker.java</font>
+</center></td></tr></table>
+<pre><span class="s0">public </span><span class="s1">ComplianceResult checkDevice(</span><span class="s0">final </span><span class="s1">String ipAddress) </span><span class="s0">throws </span><span class="s1">IOException {</span>
+        <span class="s0">final </span><span class="s1">ComplianceChecker checker = </span><span class="s0">new </span><span class="s1">ComplianceChecker()</span><span class="s0">;</span>
+        final <span class="s1">ComplianceResult result = </span><span class="s0">new </span><span class="s1">ComplianceResult()</span><span class="s0">;</span>
+        final <span class="s1">List&lt;ComplianceDetailResult&gt; results</span><span class="s0">;</span>
+
+        <span class="s1">checker.performComplianceCheck(result</span><span class="s0">, </span><span class="s2">&quot;bash&quot;</span><span class="s0">, </span><span class="s2">&quot;-c&quot;</span><span class="s0">, </span><span class="s2">&quot;sudo mkdir -p /home/pi/lynis/files &amp;&amp; cd /home/pi/ &amp;&amp; &quot;</span>
+            <span class="s1">+ </span><span class="s2">&quot;sudo tar &quot;</span>
+            <span class="s1">+ </span><span class="s2">&quot;czf &quot;</span>
+            <span class="s1">+ </span><span class="s2">&quot;./lynis/files/lynis-remote.tar.gz --exclude=files/lynis-remote.tar.gz ./lynis &amp;&amp; cd &quot;</span>
+            <span class="s1">+ </span><span class="s2">&quot;lynis&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">checker.performComplianceCheck(result</span><span class="s0">, </span><span class="s2">&quot;bash&quot;</span><span class="s0">, </span><span class="s2">&quot;-c&quot;</span><span class="s0">, </span><span class="s1">String.format(</span><span class="s2">&quot;scp -q /home/pi/lynis/files/lynis-remote&quot;</span>
+                                                                              <span class="s1">+ </span><span class="s2">&quot;.tar.gz&quot;</span>
+                                                                       <span class="s1">+ </span><span class="s2">&quot; pi@%s:~/tmp-lynis-remote.tgz&quot;</span><span class="s0">, </span><span class="s1">ipAddress))</span><span class="s0">;</span>
+        <span class="s1">checker.performComplianceCheck(result</span><span class="s0">, </span><span class="s2">&quot;bash&quot;</span><span class="s0">, </span><span class="s2">&quot;-c&quot;</span><span class="s0">, </span><span class="s1">String.format(</span><span class="s2">&quot;ssh pi@%s </span><span class="s0">\&quot;</span><span class="s2">sudo mkdir -p &quot;</span>
+                                                                                        <span class="s1">+ </span><span class="s2">&quot;~/tmp-lynis &quot;</span>
+                                                                                 <span class="s1">+ </span><span class="s2">&quot;&amp;&amp; cd &quot;</span>
+                                                                                 <span class="s1">+ </span><span class="s2">&quot;~/tmp-lynis &quot;</span>
+                                                                                 <span class="s1">+ </span><span class="s2">&quot;&amp;&amp; sudo tar xzf .&quot;</span>
+                                                                                 <span class="s1">+ </span><span class="s2">&quot;./tmp-lynis-remote.tgz &amp;&amp; sudo rm ../tmp-lynis-remote.tgz &amp;&amp; cd lynis &amp;&amp; sudo ./lynis &quot;</span>
+                                                                                 <span class="s1">+ </span><span class="s2">&quot;audit system --tests-from-group &quot;</span>
+                                                                                 <span class="s1">+ </span><span class="s2">&quot;device.txt --no-colors | sed &quot;</span>
+                                                                                 <span class="s1">+ </span><span class="s2">&quot;'s/</span><span class="s0">\\</span><span class="s2">x1B</span><span class="s0">\\</span><span class="s2">[[0-9;]*[C]//g' &quot; </span><span class="s1">+ </span><span class="s2">&quot;&amp;&amp; &quot;</span>
+                                                                                 <span class="s1">+ </span><span class="s2">&quot;sudo chmod &quot;</span>
+                                                                                 <span class="s1">+ </span><span class="s2">&quot;644 /var/log/lynis.log &quot;</span>
+                                                                                 <span class="s1">+ </span><span class="s2">&quot;/var/log/lynis-report.dat</span><span class="s0">\&quot;</span><span class="s2">&quot;</span><span class="s0">,</span>
+                                                                                 <span class="s1">ipAddress))</span><span class="s0">;</span>
+        <span class="s1">checker.performComplianceCheck(result</span><span class="s0">, </span><span class="s2">&quot;bash&quot;</span><span class="s0">, </span><span class="s2">&quot;-c&quot;</span><span class="s0">, </span><span class="s1">String.format(</span><span class="s2">&quot;ssh pi@%s sudo rm -rf ~/tmp-lynis&quot;</span><span class="s0">,</span>
+                                                                   <span class="s1">ipAddress))</span><span class="s0">;</span>
+        <span class="s1">checker.performComplianceCheck(result</span><span class="s0">, </span><span class="s2">&quot;bash&quot;</span><span class="s0">, </span><span class="s2">&quot;-c&quot;</span><span class="s0">, </span><span class="s1">String.format(</span><span class="s2">&quot;scp -q pi@%s:/var/log/lynis.log &quot;</span>
+                                                                       <span class="s1">+ </span><span class="s2">&quot;/home/pi/pi@%s-lynis-dev&quot;</span>
+                                                                       <span class="s1">+ </span><span class="s2">&quot;.log&quot;</span><span class="s0">, </span><span class="s1">ipAddress</span><span class="s0">, </span><span class="s1">ipAddress))</span><span class="s0">;</span>
+        <span class="s1">checker.performComplianceCheck(result</span><span class="s0">, </span><span class="s2">&quot;bash&quot;</span><span class="s0">, </span><span class="s2">&quot;-c&quot;</span><span class="s0">, </span><span class="s1">String.format(</span><span class="s2">&quot;scp -q pi@%s:/var/log/lynis-report.dat &quot;</span>
+                                                                       <span class="s1">+ </span><span class="s2">&quot;/home/pi/pi@%s-lynis-report-dev.dat&quot;</span><span class="s0">,</span>
+                                                                   <span class="s1">ipAddress</span><span class="s0">, </span><span class="s1">ipAddress))</span><span class="s0">;</span>
+        <span class="s1">checker.performComplianceCheck(result</span><span class="s0">, </span><span class="s2">&quot;bash&quot;</span><span class="s0">, </span><span class="s2">&quot;-c&quot;</span><span class="s0">, </span><span class="s1">String.format(</span><span class="s2">&quot;ssh pi@%s sudo rm /var/log/lynis.log &quot;</span>
+                                                                       <span class="s1">+ </span><span class="s2">&quot;/var/log/lynis-report.dat&quot;</span><span class="s0">, </span><span class="s1">ipAddress))</span><span class="s0">;</span>
+
+        <span class="s1">getdevreport(ipAddress)</span><span class="s0">;</span>
+
+        return <span class="s1">result</span><span class="s0">;</span>
+    <span class="s1">}</span></pre>
+</body>
+</html>

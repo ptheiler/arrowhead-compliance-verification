@@ -1,0 +1,15 @@
+[Unit]
+Description=arrowhead-authorization
+After=network.target mysql.target arrowhead-serviceregistry-sql.service
+Requires=arrowhead-serviceregistry-sql.service
+
+[Service]
+WorkingDirectory=/etc/arrowhead/systems/authorization
+ExecStart=/usr/bin/java -jar /usr/share/arrowhead/arrowhead-authorization.jar -d -daemon -tls
+TimeoutStopSec=5
+Type=simple
+User=arrowhead
+Group=arrowhead
+
+[Install]
+WantedBy=default.target

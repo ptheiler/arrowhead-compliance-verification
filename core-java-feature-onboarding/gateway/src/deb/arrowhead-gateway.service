@@ -1,0 +1,15 @@
+[Unit]
+Description=arrowhead-gateway
+After=network.target mysql.target arrowhead-serviceregistry-sql.service
+Requires=arrowhead-serviceregistry-sql.service
+
+[Service]
+WorkingDirectory=/etc/arrowhead/systems/gateway
+ExecStart=/usr/bin/java -jar /usr/share/arrowhead/arrowhead-gateway.jar -d -daemon -tls
+TimeoutStopSec=5
+Type=simple
+User=arrowhead
+Group=arrowhead
+
+[Install]
+WantedBy=default.target

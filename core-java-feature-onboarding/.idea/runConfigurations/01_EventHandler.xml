@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="01-EventHandler" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="eu.arrowhead.core.eventhandler.EventHandlerMain" />
+    <module name="arrowhead-eventhandler" />
+    <option name="PROGRAM_PARAMETERS" value="-d" />
+    <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="eu.arrowhead.core.eventhandler.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

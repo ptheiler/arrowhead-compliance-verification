@@ -1,0 +1,32 @@
+### Eclipse/STS ###
+*.apt_generated
+*.classpath
+*.factorypath
+*.project
+*.settings
+*.springBeans
+*.sts4-cache
+
+### IntelliJ IDEA ###
+.idea/*.xml
+.idea/dataSources
+.idea/libraries
+.idea/markdown-navigator
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### General ###
+/config/
+*.properties
+*/target
+*.txt
+*app.conf

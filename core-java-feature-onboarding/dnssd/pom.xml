@@ -1,0 +1,29 @@
+<!--
+  ~ Copyright (c) 2011, Daniel Nilsson
+  ~ Released under a simplified BSD license,
+  ~ see README.txt for details.
+  -->
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>eu.arrowhead</groupId>
+    <artifactId>core</artifactId>
+    <version>${revision}</version>
+  </parent>
+
+  <artifactId>arrowhead-dnssd</artifactId>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>dnsjava</groupId>
+      <artifactId>dnsjava</artifactId>
+    </dependency>
+
+  </dependencies>
+
+</project>

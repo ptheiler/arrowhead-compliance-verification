@@ -1,0 +1,15 @@
+[Unit]
+Description=arrowhead-orchestrator
+After=network.target mysql.target arrowhead-serviceregistry-sql.service
+Requires=arrowhead-serviceregistry-sql.service arrowhead-authorization.service arrowhead-gatekeeper.service
+
+[Service]
+WorkingDirectory=/etc/arrowhead/systems/orchestrator
+ExecStart=/usr/bin/java -jar /usr/share/arrowhead/arrowhead-orchestrator.jar -d -daemon -tls
+TimeoutStopSec=5
+Type=simple
+User=arrowhead
+Group=arrowhead
+
+[Install]
+WantedBy=default.target

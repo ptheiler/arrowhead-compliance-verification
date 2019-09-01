@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Core Systems" type="CompoundRunConfigurationType">
+    <toRun name="01-Authorization" type="Application" />
+    <toRun name="02-DeviceRegistry" type="Application" />
+    <toRun name="01-EventHandler" type="Application" />
+    <toRun name="01-Orchestrator" type="Application" />
+    <toRun name="02-Certificate Authority" type="Application" />
+    <toRun name="00-ServiceRegistry" type="Application" />
+    <toRun name="01-Gateway" type="Application" />
+    <toRun name="02-SystemRegistry" type="Application" />
+    <toRun name="01-Gatekeeper" type="Application" />
+    <toRun name="02-Onboarding" type="Application" />
+    <method v="2" />
+  </configuration>
+</component>

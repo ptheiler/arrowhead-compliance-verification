@@ -1,0 +1,15 @@
+[Unit]
+Description=arrowhead-eventhandler
+After=network.target mysql.target arrowhead-serviceregistry-sql.service
+Requires=arrowhead-serviceregistry-sql.service
+
+[Service]
+WorkingDirectory=/etc/arrowhead/systems/event_handler
+ExecStart=/usr/bin/java -jar /usr/share/arrowhead/arrowhead-eventhandler.jar -d -daemon -tls
+TimeoutStopSec=5
+Type=simple
+User=arrowhead
+Group=arrowhead
+
+[Install]
+WantedBy=default.target

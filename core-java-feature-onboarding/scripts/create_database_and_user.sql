@@ -1,0 +1,6 @@
+CREATE DATABASE IF NOT EXISTS arrowhead;
+USE arrowhead;
+
+CREATE USER IF NOT EXISTS arrowhead IDENTIFIED BY 'arrowhead';
+GRANT ALL PRIVILEGES ON arrowhead.* TO arrowhead;
+FLUSH PRIVILEGES;

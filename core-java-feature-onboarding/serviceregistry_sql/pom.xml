@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ This work is part of the Productive 4.0 innovation project, which receives grants from the
+  ~ European Commissions H2020 research and innovation programme, ECSEL Joint Undertaking
+  ~ (project no. 737459), the free state of Saxony, the German Federal Ministry of Education and
+  ~ national funding authorities from involved countries.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>eu.arrowhead</groupId>
+    <artifactId>core</artifactId>
+    <version>${revision}</version>
+  </parent>
+
+  <artifactId>arrowhead-serviceregistry-sql</artifactId>
+  <packaging>jar</packaging>
+
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.version>3.8.0</maven.compiler.version>
+    <maven.dependency.version>2.10</maven.dependency.version>
+    <maven.jar.version>3.0.2</maven.jar.version>
+    <maven.resources.version>2.7</maven.resources.version>
+  </properties>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>eu.arrowhead</groupId>
+      <artifactId>arrowhead-core-common</artifactId>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven.compiler.version}</version>
+        <executions>
+          <execution>
+            <id>default-compile</id>
+            <configuration>
+              <showDeprecation>true</showDeprecation>
+              <showWarnings>true</showWarnings>
+              <compilerArguments>
+                <source>${maven.compiler.target}</source>
+                <target>${maven.compiler.source}</target>
+              </compilerArguments>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
+        </configuration>
+      </plugin>
+      <!-- Make this jar executable -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>${maven.jar.version}</version>
+        <configuration>
+          <!-- MainClass in mainfest make a executable jar -->
+          <archive>
+            <manifestEntries>
+              <Class-Path>config/</Class-Path>
+            </manifestEntries>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>eu.arrowhead.core.serviceregistry_sql.ServiceRegistryMain</mainClass>
+              <classpathPrefix>lib/</classpathPrefix>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+      <!-- Copy project dependency -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>${maven.dependency.version}</version>
+        <executions>
+          <execution>
+            <id>copy-dependencies</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <!-- exclude junit, we need runtime dependency only -->
+              <outputDirectory>${basedir}/target/lib/</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>${maven.resources.version}</version>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <!-- here the phase you need -->
+            <phase>validate</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/config</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>config</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>jdeb</artifactId>
+        <groupId>org.vafer</groupId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>jdeb</goal>
+            </goals>
+            <configuration>
+              <snapshotExpand>true</snapshotExpand>
+              <snapshotTemplate>[YYMMddHHmm].${git.commit.id.abbrev}</snapshotTemplate>
+              <deb>target/${project.artifactId}_${revision}.deb</deb>
+              <verbose>true</verbose>
+              <controlDir>${basedir}/src/deb/control</controlDir>
+              <dataSet>
+
+                <data>
+                  <type>file</type>
+                  <src>${project.build.directory}/${project.build.finalName}.jar</src>
+                  <mapper>
+                    <type>perm</type>
+                    <prefix>/usr/share/arrowhead</prefix>
+                    <user>arrowhead</user>
+                    <filemode>755</filemode>
+                  </mapper>
+                </data>
+
+                <data>
+                  <type>link</type>
+                  <linkName>/usr/share/arrowhead/${project.artifactId}.jar</linkName>
+                  <linkTarget>/usr/share/arrowhead/${project.build.finalName}.jar</linkTarget>
+                </data>
+
+                <data>
+                  <type>file</type>
+                  <src>${project.basedir}/src/deb/arrowhead-serviceregistry-sql.service</src>
+                  <mapper>
+                    <type>perm</type>
+                    <prefix>/etc/systemd/system</prefix>
+                    <filemode>664</filemode>
+                  </mapper>
+                </data>
+
+              </dataSet>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
