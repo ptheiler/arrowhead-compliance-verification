@@ -1,0 +1,7 @@
+eu\arrowhead\core\gatekeeper\GatekeeperOutboundResource.class
+eu\arrowhead\core\gatekeeper\filter\SupportAccessControlFilter.class
+eu\arrowhead\core\gatekeeper\GatekeeperApi.class
+eu\arrowhead\core\gatekeeper\filter\GatekeeperACF.class
+eu\arrowhead\core\gatekeeper\filter\UnavailableFilter.class
+eu\arrowhead\core\gatekeeper\GatekeeperInboundResource.class
+eu\arrowhead\core\gatekeeper\GatekeeperMain.class

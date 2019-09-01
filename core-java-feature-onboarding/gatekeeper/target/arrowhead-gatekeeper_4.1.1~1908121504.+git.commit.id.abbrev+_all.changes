@@ -1,0 +1,20 @@
+Format: 1.8
+Date: Mon, 12 Aug 2019 15:05:05 +0200
+Source: arrowhead-gatekeeper
+Binary: arrowhead-gatekeeper
+Architecture: all
+Version: 4.1.1~1908121504.+git.commit.id.abbrev+
+Distribution: development
+Urgency: low
+Maintainer: Thomas Pedersen <tp@cs.aau.dk>
+Changed-By: Thomas Pedersen <tp@cs.aau.dk>
+Description:
+ arrowhead-gatekeeper - Arrowhead Gatekeeper System
+Changes:
+ arrowhead-gatekeeper (4.1.1~1908121504.+git.commit.id.abbrev+) development; urgency=low
+Checksums-Sha1:
+ 5fb73068a0b0ceb40857bd23e684303e6da1ee41 36228 arrowhead-gatekeeper_4.1.1-SNAPSHOT.deb
+Checksums-Sha256:
+ 9284fbd0c42d6cc9c8eb67e94623c197d20dc3ff1467b670a1e6542ae24e07a7 36228 arrowhead-gatekeeper_4.1.1-SNAPSHOT.deb
+Files:
+ ff254434d4a6abbe68cc7317eb2f9f73 36228 contrib/java optional arrowhead-gatekeeper_4.1.1-SNAPSHOT.deb

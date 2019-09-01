@@ -1,0 +1,20 @@
+Format: 1.8
+Date: Thu, 8 Aug 2019 16:23:09 +0200
+Source: arrowhead-core-common
+Binary: arrowhead-core-common
+Architecture: all
+Version: 4.1.1~1908081623.+git.commit.id.abbrev+
+Distribution: development
+Urgency: low
+Maintainer: Thomas Pedersen <tp@cs.aau.dk>
+Changed-By: Thomas Pedersen <tp@cs.aau.dk>
+Description:
+ arrowhead-core-common - Arrowhead Common
+Changes:
+ arrowhead-core-common (4.1.1~1908081623.+git.commit.id.abbrev+) development; urgency=low
+Checksums-Sha1:
+ f739647aae1d378770118abd06471f87690e2eec 28710370 arrowhead-core-common_4.1.1-SNAPSHOT.deb
+Checksums-Sha256:
+ 8bd8b2a142e2b26a89a2699ee406eee8025c46a88911c3cde47930f8201950a1 28710370 arrowhead-core-common_4.1.1-SNAPSHOT.deb
+Files:
+ 7e58c49593c1d56dc93db1b880c810ae 28710370 contrib/java optional arrowhead-core-common_4.1.1-SNAPSHOT.deb

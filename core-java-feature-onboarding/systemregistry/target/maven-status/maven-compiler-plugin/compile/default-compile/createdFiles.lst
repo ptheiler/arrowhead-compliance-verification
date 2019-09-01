@@ -1,0 +1,5 @@
+eu\arrowhead\core\systemregistry\SystemRegistryResource.class
+eu\arrowhead\core\systemregistry\SystemRegistryMain.class
+eu\arrowhead\core\systemregistry\SystemRegistryService.class
+eu\arrowhead\core\systemregistry\SystemRegistryApi.class
+eu\arrowhead\core\systemregistry\filter\SystemRegACF.class

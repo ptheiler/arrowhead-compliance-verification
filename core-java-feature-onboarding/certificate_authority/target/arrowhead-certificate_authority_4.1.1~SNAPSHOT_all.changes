@@ -1,0 +1,20 @@
+Format: 1.8
+Date: Sun, 1 Sep 2019 14:15:43 +0200
+Source: arrowhead-certificate_authority
+Binary: arrowhead-certificate_authority
+Architecture: all
+Version: 4.1.1~SNAPSHOT
+Distribution: development
+Urgency: low
+Maintainer: Thomas Pedersen <tp@cs.aau.dk>
+Changed-By: Thomas Pedersen <tp@cs.aau.dk>
+Description:
+ arrowhead-certificate_authority - Arrowhead Certificate Authority System
+Changes:
+ arrowhead-certificate_authority (4.1.1~SNAPSHOT) development; urgency=low
+Checksums-Sha1:
+ 5e85a76a1f415b713cd1e913dd3aafaa6e9939b3 698678 arrowhead-certificate_authority_4.1.1~SNAPSHOT_all.deb
+Checksums-Sha256:
+ fbdbaf176c3d6d6df3f78bf8eae81340de26f728a068b6c9c055ac4061259636 698678 arrowhead-certificate_authority_4.1.1~SNAPSHOT_all.deb
+Files:
+ fb8e754a68be48aea490fe69b03f9ae9 698678 contrib/java optional arrowhead-certificate_authority_4.1.1~SNAPSHOT_all.deb

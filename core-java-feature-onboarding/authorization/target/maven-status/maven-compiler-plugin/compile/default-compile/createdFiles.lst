@@ -1,0 +1,8 @@
+eu\arrowhead\core\authorization\AuthorizationResource.class
+eu\arrowhead\core\authorization\AuthorizationApi$1.class
+eu\arrowhead\core\authorization\AuthorizationApi.class
+eu\arrowhead\core\authorization\AuthorizationApi$2.class
+eu\arrowhead\core\authorization\filter\SupportAccessControlFilter.class
+eu\arrowhead\core\authorization\AuthorizationMain.class
+eu\arrowhead\core\authorization\filter\AuthACF.class
+eu\arrowhead\core\authorization\TokenGenerationService.class

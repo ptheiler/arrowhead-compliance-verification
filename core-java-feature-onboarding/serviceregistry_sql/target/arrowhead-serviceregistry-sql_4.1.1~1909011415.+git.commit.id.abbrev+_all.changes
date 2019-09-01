@@ -1,0 +1,20 @@
+Format: 1.8
+Date: Sun, 1 Sep 2019 14:15:48 +0200
+Source: arrowhead-serviceregistry-sql
+Binary: arrowhead-serviceregistry-sql
+Architecture: all
+Version: 4.1.1~1909011415.+git.commit.id.abbrev+
+Distribution: development
+Urgency: low
+Maintainer: Thomas Pedersen <tp@cs.aau.dk>
+Changed-By: Thomas Pedersen <tp@cs.aau.dk>
+Description:
+ arrowhead-serviceregistry-sql - Arrowhead Service Registry (SQL)
+Changes:
+ arrowhead-serviceregistry-sql (4.1.1~1909011415.+git.commit.id.abbrev+) development; urgency=low
+Checksums-Sha1:
+ 6d4bccebebb9a84567e0aa98c474c818a58885a9 28790 arrowhead-serviceregistry-sql_4.1.1-SNAPSHOT.deb
+Checksums-Sha256:
+ 51a88a16a819995bd50da8120f33c6ea42969120d6946452bef6a62a826262d0 28790 arrowhead-serviceregistry-sql_4.1.1-SNAPSHOT.deb
+Files:
+ 19f2479a5371f0029d79b4bbc7805282 28790 contrib/java optional arrowhead-serviceregistry-sql_4.1.1-SNAPSHOT.deb

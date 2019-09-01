@@ -1,0 +1,8 @@
+eu\arrowhead\core\serviceregistry\ServiceRegistry.class
+eu\arrowhead\core\serviceregistry\RemoveExpiredServicesTask.class
+eu\arrowhead\core\serviceregistry\ServiceRegistryResource.class
+eu\arrowhead\core\serviceregistry\ServiceRegistryMain.class
+eu\arrowhead\core\serviceregistry\filter\SupportAccessControlFilter.class
+eu\arrowhead\core\serviceregistry\RegistryUtils.class
+eu\arrowhead\core\serviceregistry\PingProvidersTask.class
+eu\arrowhead\core\serviceregistry\filter\ServiceRegACF.class

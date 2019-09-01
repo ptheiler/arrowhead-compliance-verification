@@ -1,0 +1,6 @@
+eu\arrowhead\core\eventhandler\EventHandlerMain.class
+eu\arrowhead\core\eventhandler\EventHandlerResource.class
+eu\arrowhead\core\eventhandler\EventHandlerService.class
+eu\arrowhead\core\eventhandler\EventHandlerApi.class
+eu\arrowhead\core\eventhandler\DeleteExpiredFiltersTask.class
+eu\arrowhead\core\eventhandler\filter\EventHandlerACF.class

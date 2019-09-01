@@ -1,0 +1,20 @@
+Format: 1.8
+Date: Tue, 13 Aug 2019 16:08:22 +0200
+Source: arrowhead-authorization
+Binary: arrowhead-authorization
+Architecture: all
+Version: 4.1.1~1908131607.+git.commit.id.abbrev+
+Distribution: development
+Urgency: low
+Maintainer: Thomas Pedersen <tp@cs.aau.dk>
+Changed-By: Thomas Pedersen <tp@cs.aau.dk>
+Description:
+ arrowhead-authorization - Arrowhead Authorization System
+Changes:
+ arrowhead-authorization (4.1.1~1908131607.+git.commit.id.abbrev+) development; urgency=low
+Checksums-Sha1:
+ cdbcc5cce13068ecf5751cba7ff3457eded0b520 3539702 arrowhead-authorization_4.1.1-SNAPSHOT.deb
+Checksums-Sha256:
+ 011a4a923a9456c9e9953a41e6aaa51dd37b60e52f8dede823d33c4d1c7e68c1 3539702 arrowhead-authorization_4.1.1-SNAPSHOT.deb
+Files:
+ 93e637ce6298ed7d4b67d076a4035ccc 3539702 contrib/java optional arrowhead-authorization_4.1.1-SNAPSHOT.deb

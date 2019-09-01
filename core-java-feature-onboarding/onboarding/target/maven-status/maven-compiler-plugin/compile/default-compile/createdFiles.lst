@@ -1,0 +1,9 @@
+eu\arrowhead\core\onboarding\model\OnboardingWithSharedKeyRequest.class
+eu\arrowhead\core\onboarding\OnboardingService.class
+eu\arrowhead\core\onboarding\model\OnboardingRequest.class
+eu\arrowhead\core\onboarding\model\OnboardingResponse.class
+eu\arrowhead\core\onboarding\model\OnboardingWithCertificateRequest.class
+eu\arrowhead\core\onboarding\model\ServiceEndpoint.class
+eu\arrowhead\core\onboarding\OnboardingMain.class
+eu\arrowhead\core\onboarding\OnboardingResource.class
+eu\arrowhead\core\onboarding\filter\OnboardingACF.class

@@ -1,0 +1,20 @@
+Format: 1.8
+Date: Mon, 12 Aug 2019 12:37:54 +0200
+Source: arrowhead-eventhandler
+Binary: arrowhead-eventhandler
+Architecture: all
+Version: 4.1.1~1908121237.+git.commit.id.abbrev+
+Distribution: development
+Urgency: low
+Maintainer: Thomas Pedersen <tp@cs.aau.dk>
+Changed-By: Thomas Pedersen <tp@cs.aau.dk>
+Description:
+ arrowhead-eventhandler - Arrowhead Event Handler System
+Changes:
+ arrowhead-eventhandler (4.1.1~1908121237.+git.commit.id.abbrev+) development; urgency=low
+Checksums-Sha1:
+ 90570d26b43f00dcaef2aca1488a1a39ae1a1bca 20460 arrowhead-eventhandler_4.1.1-SNAPSHOT.deb
+Checksums-Sha256:
+ af6027eec2e2bec712e814ebdc40d5c9e8c2514209aacb96fbe83503fb98fc44 20460 arrowhead-eventhandler_4.1.1-SNAPSHOT.deb
+Files:
+ efa069b8383b26560b0a9145e0930256 20460 contrib/java optional arrowhead-eventhandler_4.1.1-SNAPSHOT.deb

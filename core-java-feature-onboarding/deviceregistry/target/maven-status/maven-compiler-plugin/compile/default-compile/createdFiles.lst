@@ -1,0 +1,9 @@
+eu\arrowhead\core\deviceregistry\DeviceRegistryMain.class
+eu\arrowhead\common\RegistryService.class
+eu\arrowhead\common\Resource.class
+eu\arrowhead\core\deviceregistry\DeviceRegistryApi.class
+eu\arrowhead\core\deviceregistry\DeviceRegistryService.class
+eu\arrowhead\common\RegistryResource.class
+eu\arrowhead\core\deviceregistry\DeviceRegistryResource.class
+eu\arrowhead\core\deviceregistry\filter\DeviceRegACF.class
+eu\arrowhead\core\deviceregistry\model\DeviceRegistryEntry.class

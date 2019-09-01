@@ -1,0 +1,20 @@
+Format: 1.8
+Date: Sun, 1 Sep 2019 14:15:46 +0200
+Source: arrowhead-gateway
+Binary: arrowhead-gateway
+Architecture: all
+Version: 4.1.1~1909011415.+git.commit.id.abbrev+
+Distribution: development
+Urgency: low
+Maintainer: Thomas Pedersen <tp@cs.aau.dk>
+Changed-By: Thomas Pedersen <tp@cs.aau.dk>
+Description:
+ arrowhead-gateway - Arrowhead Gateway System
+Changes:
+ arrowhead-gateway (4.1.1~1909011415.+git.commit.id.abbrev+) development; urgency=low
+Checksums-Sha1:
+ 01f83270920551be39b7aa4db961f2d558a3c8d0 568230 arrowhead-gateway_4.1.1-SNAPSHOT.deb
+Checksums-Sha256:
+ 25ea5859bf0d33e5e69d4c28cf02bddc63afa4505fad67b2a0fe4ca80220e293 568230 arrowhead-gateway_4.1.1-SNAPSHOT.deb
+Files:
+ 800efd3d143cab9af7ed76ca8c4669cd 568230 contrib/java optional arrowhead-gateway_4.1.1-SNAPSHOT.deb

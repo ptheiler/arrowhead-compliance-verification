@@ -1,0 +1,20 @@
+Format: 1.8
+Date: Mon, 5 Aug 2019 23:50:02 +0200
+Source: arrowhead-orchestrator
+Binary: arrowhead-orchestrator
+Architecture: all
+Version: 4.1.1~1908052349.+git.commit.id.abbrev+
+Distribution: development
+Urgency: low
+Maintainer: Thomas Pedersen <tp@cs.aau.dk>
+Changed-By: Thomas Pedersen <tp@cs.aau.dk>
+Description:
+ arrowhead-orchestrator - Arrowhead Orchestrator System
+Changes:
+ arrowhead-orchestrator (4.1.1~1908052349.+git.commit.id.abbrev+) development; urgency=low
+Checksums-Sha1:
+ 813b8b4fd563f58f0a70d36b628667a5bcba31f5 42720 arrowhead-orchestrator_4.1.1-SNAPSHOT.deb
+Checksums-Sha256:
+ 22fb86045f67d4b8197581cedc3f22d9f3678f5463b74eb1e5545caecbb2bee3 42720 arrowhead-orchestrator_4.1.1-SNAPSHOT.deb
+Files:
+ c76f7b4e2bbc549195630c1e3b5e7f8f 42720 contrib/java optional arrowhead-orchestrator_4.1.1-SNAPSHOT.deb
